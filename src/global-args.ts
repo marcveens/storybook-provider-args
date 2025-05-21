@@ -26,7 +26,5 @@ export const withGlobalArgs = <T extends StoryObj>(
     };
   }
 
-  console.log(rest);
-
   return rest;
 };

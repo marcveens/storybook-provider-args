@@ -8,7 +8,7 @@ on:
       - "main" # Replace with the branch you want to deploy from
   # Also run on manual trigger
   workflow_dispatch:
-  
+
 permissions:
   contents: read
   pages: write
@@ -32,4 +32,3 @@ jobs:
       - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
           path: storybook-static 
-          checkout: false # default: true

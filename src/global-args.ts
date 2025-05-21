@@ -1,16 +1,16 @@
 import type { Args, ArgTypes, StoryObj } from "@storybook/react";
 import { settingsArgs, settingsArgTypes } from "./with-context-provider";
 
-export const globalArgs: Args = {
+export const globalArgs = {
   ...settingsArgs,
-};
+} satisfies Args;
 
 export const globalArgTypes: ArgTypes = {
   ...settingsArgTypes,
 };
 
 type StoryObjWithGlobalArgs<T extends StoryObj> = T & {
-  globalArgs?: Partial<Args>;
+  globalArgs?: Partial<typeof globalArgs>;
 };
 
 export const withGlobalArgs = <T extends StoryObj>(
